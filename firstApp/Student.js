@@ -1,0 +1,35 @@
+/**
+ * Created by yueyunshi on 2018/2/9.
+ */
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
+import React, { Component } from 'react';
+import {
+    Platform,
+    StyleSheet,
+    Text,
+    View
+} from 'react-native';
+import ClassTest from './ClassTest'
+export default class Student extends  ClassTest{
+
+     // 构造
+       constructor(name,age,sex,bodyHeight) {
+         super(name,age,sex);
+         // 初始状态
+         this.state = {};
+           this.name = name;
+           this.age  = age;
+           this.sex = sex;
+           this.bodyHeight = bodyHeight;
+       }
+
+    getDesc(){
+        return 'Student'+'name ='+this.name+'age ='+this.age+'sex ='+this.sex+'bodyHeight ='+this.bodyHeight
+    }
+}
+
